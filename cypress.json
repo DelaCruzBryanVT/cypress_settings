@@ -1,0 +1,15 @@
+{
+    "experimentalStudio": true,
+    "reporter": "mochawesome",
+    "reporterOptions": {
+        "charts": true,
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress/report"
+    },
+    "env": {
+        "contacts_url": "",
+        "server_url": ""
+    }
+}

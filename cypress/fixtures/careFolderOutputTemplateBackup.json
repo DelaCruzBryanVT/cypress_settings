@@ -1,0 +1,152 @@
+[
+  {
+    "$id": "1",
+    "id": "7ee1b53c-5714-31a1-3b5c-6d9e147f3d27",
+    "name": "Backup ALPHA BETA",
+    "isEnabled": false,
+    "fromDate": "-1M.FirstDayOfMonth.StartOfDay",
+    "toDate": "-1M.LastDayOfMonth.StartOfDay",
+    "careFolderOutputTemplateBackupNotificationTypeId": 2,
+    "careFolderOutputTemplateBackupNotificationTypeName": "Always"
+  },
+  {
+    "$id": "2",
+    "id": "d90aa21c-1df3-4c96-b7e6-6b31a6ebef09",
+    "name": "Backup del sec SecTestFormY",
+    "isEnabled": false,
+    "fromDate": "-20d.PreviousMonday.StartOfDay",
+    "toDate": "+0d",
+    "careFolderOutputTemplateBackupNotificationTypeId": 2,
+    "careFolderOutputTemplateBackupNotificationTypeName": "Always"
+  },
+  {
+    "$id": "3",
+    "id": "d914fce4-b72e-df09-5c06-cf345b24126b",
+    "name": "Problema Identity Documents Launcher",
+    "isEnabled": false,
+    "fromDate": "('-7d.PreviousMonday.StartOfDay')",
+    "toDate": "('+0d')",
+    "careFolderOutputTemplateBackupNotificationTypeId": 2,
+    "careFolderOutputTemplateBackupNotificationTypeName": "Always"
+  },
+  {
+    "$id": "4",
+    "id": "b971eef0-0786-2035-0891-33bb1c633cb8",
+    "name": "test carefolder1",
+    "isEnabled": true,
+    "fromDate": "('-7d.PreviousMonday.StartOfDay')",
+    "toDate": "('+0d')",
+    "careFolderOutputTemplateBackupNotificationTypeId": 2,
+    "careFolderOutputTemplateBackupNotificationTypeName": "Always"
+  },
+  {
+    "$id": "5",
+    "id": "e4d23a31-1a6a-786e-f193-004e6d993ab9",
+    "name": "TEST CYPRESS SAVE",
+    "isEnabled": false,
+    "fromDate": "('-7d.PreviousMonday.StartOfDay')",
+    "toDate": "('+0d')",
+    "careFolderOutputTemplateBackupNotificationTypeId": 2,
+    "careFolderOutputTemplateBackupNotificationTypeName": "Always"
+  },
+  {
+    "$id": "6",
+    "id": "4db696d1-bd32-900a-32e1-1e417049f8e1",
+    "name": "555",
+    "isEnabled": true,
+    "fromDate": "('-7d.PreviousMonday.StartOfDay')",
+    "toDate": "('+0d')",
+    "careFolderOutputTemplateBackupNotificationTypeId": 1,
+    "careFolderOutputTemplateBackupNotificationTypeName": "None"
+  },
+  {
+    "$id": "7",
+    "id": "4652aed1-d22c-0081-ec10-2db690fb7761",
+    "name": "Care Folder Output Template Backup test test01",
+    "isEnabled": false,
+    "fromDate": "('-7d.PreviousMonday.StartOfDay')",
+    "toDate": "('+0d')",
+    "careFolderOutputTemplateBackupNotificationTypeId": 1,
+    "careFolderOutputTemplateBackupNotificationTypeName": "None"
+  },
+  {
+    "$id": "8",
+    "id": "f1bcf7b3-36c1-2034-0c37-b3d3c5c497c4",
+    "name": "d1",
+    "isEnabled": false,
+    "fromDate": "('-7d.PreviousMonday.StartOfDay')",
+    "toDate": "('+0d')",
+    "careFolderOutputTemplateBackupNotificationTypeId": 1,
+    "careFolderOutputTemplateBackupNotificationTypeName": "None"
+  },
+  {
+    "$id": "9",
+    "id": "bdfa665f-a995-6748-b69e-273c8c165a99",
+    "name": "d1 mod",
+    "isEnabled": false,
+    "fromDate": "('-7d.PreviousMonday.StartOfDay')",
+    "toDate": "('+0d')",
+    "careFolderOutputTemplateBackupNotificationTypeId": 1,
+    "careFolderOutputTemplateBackupNotificationTypeName": "None"
+  },
+  {
+    "$id": "10",
+    "id": "4426e4b4-56b4-b4c6-1069-3862ab714004",
+    "name": "nam3",
+    "isEnabled": false,
+    "fromDate": "('-7d.PreviousMonday.StartOfDay')",
+    "toDate": "('+0d')",
+    "careFolderOutputTemplateBackupNotificationTypeId": 1,
+    "careFolderOutputTemplateBackupNotificationTypeName": "None"
+  },
+  {
+    "$id": "11",
+    "id": "2b75ed80-d17b-7c69-9be3-0f43fa070f4b",
+    "name": "test",
+    "isEnabled": true,
+    "fromDate": "('-7d.PreviousMonday.StartOfDay')",
+    "toDate": "('+0d')",
+    "careFolderOutputTemplateBackupNotificationTypeId": 1,
+    "careFolderOutputTemplateBackupNotificationTypeName": "None"
+  },
+  {
+    "$id": "12",
+    "id": "69baf23b-4da5-fde0-81b5-67df6a2afe7f",
+    "name": "test 001 CFOTB",
+    "isEnabled": false,
+    "fromDate": "('-7d.PreviousMonday.StartOfDay')",
+    "toDate": "('+0d')",
+    "careFolderOutputTemplateBackupNotificationTypeId": 1,
+    "careFolderOutputTemplateBackupNotificationTypeName": "None"
+  },
+  {
+    "$id": "13",
+    "id": "decc3bbd-3f72-e2e0-fe4e-150fbd4c0013",
+    "name": "test 34",
+    "isEnabled": false,
+    "fromDate": "('-7d.PreviousMonday.StartOfDay')",
+    "toDate": "('+0d')",
+    "careFolderOutputTemplateBackupNotificationTypeId": 1,
+    "careFolderOutputTemplateBackupNotificationTypeName": "None"
+  },
+  {
+    "$id": "14",
+    "id": "1dd3cf07-c9c0-7e5e-a3b0-d2aa94a6fb2e",
+    "name": "TEST D1",
+    "isEnabled": false,
+    "fromDate": "('-7d.PreviousMonday.StartOfDay')",
+    "toDate": "('+0d')",
+    "careFolderOutputTemplateBackupNotificationTypeId": 1,
+    "careFolderOutputTemplateBackupNotificationTypeName": "None"
+  },
+  {
+    "$id": "15",
+    "id": "46e5e6ab-4b80-c43c-14ef-25e37b513ba7",
+    "name": "TestIncrocchiaTutto",
+    "isEnabled": false,
+    "fromDate": "('-7d.PreviousMonday.StartOfDay')",
+    "toDate": "('+0d')",
+    "careFolderOutputTemplateBackupNotificationTypeId": 1,
+    "careFolderOutputTemplateBackupNotificationTypeName": "None"
+  }
+]

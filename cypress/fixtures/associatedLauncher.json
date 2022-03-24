@@ -1,0 +1,16 @@
+[
+  {
+    "$id": "1",
+    "id": "b4b9d4d9-c501-fa06-e7ff-4d196c8ecb94",
+    "reportLauncherId": "1719c8c4-b0c5-4c29-9e36-44ec1fef229f",
+    "reportLauncherReportId": "1ad0d57e-2312-415e-bb34-37bb86762288",
+    "reportLauncherName": "CrossDomain_PrescriptionDefinitionPlanner_Task_Launcher"
+  },
+  {
+    "$id": "2",
+    "id": "f45a7a0f-4707-273f-5eaa-eacd58d6701b",
+    "reportLauncherId": "15cd4834-01f2-4c77-a080-89ce7a04c16f",
+    "reportLauncherReportId": "d5dcd404-9f1a-49d7-9f14-4049883ccfa5",
+    "reportLauncherName": "CrossDomain-AttendanceSheet-Launcher"
+  }
+]
