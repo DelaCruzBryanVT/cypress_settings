@@ -1,4 +1,5 @@
 {
+    "baseUrl": "https://debugsite.myequipe2/app/",
     "experimentalStudio": true,
     "reporter": "mochawesome",
     "reporterOptions": {
