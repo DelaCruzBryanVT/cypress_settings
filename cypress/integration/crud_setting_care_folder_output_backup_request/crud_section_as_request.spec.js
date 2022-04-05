@@ -16,10 +16,10 @@ describe('TEST HTTP REQUEST SECTION ASSOCIATED SCHEDULE', () => {
                 $id: "0",
                 clientApplication: 10001,
                 cultureInfo: "it",
-                password: "Qwerty.1234",
+                password: "",
                 persistent: false,
                 sessionTokens: [],
-                username: "ca",
+                username: "",
             },
             headers: {
                 "accept": "application/json, text/plain",
