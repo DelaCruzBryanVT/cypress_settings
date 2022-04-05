@@ -1,29 +1,11 @@
 [
   {
     "$id": "1",
-    "id": "7d27af0b-f93d-7242-6de5-878c7e268338",
+    "id": "258d5106-4bb7-fe4c-75a7-9da988ca16e7",
     "entityId": 10088,
-    "entityInstanceId": "70af513b-a5b1-43d6-8613-f8d872f707db",
+    "entityInstanceId": "75aa33c6-f6f3-4cfe-9cf0-121ca108131b",
     "isEnabled": true,
     "nameEntityId": "Sec",
-    "entityInstanceIdName": "aaa"
-  },
-  {
-    "$id": "2",
-    "id": "9d275623-3f13-24eb-28c8-230cb0de0403",
-    "entityId": 10088,
-    "entityInstanceId": "111abfee-996c-41a3-b668-9fba32ef360b",
-    "isEnabled": false,
-    "nameEntityId": "Sec",
-    "entityInstanceIdName": "ACU/DH (6cam)"
-  },
-  {
-    "$id": "3",
-    "id": "b6a66855-e33b-de4d-387a-632a698794cf",
-    "entityId": 10326,
-    "entityInstanceId": "df1e1b96-0993-44e4-9e29-f5d96b93ac4b",
-    "isEnabled": false,
-    "nameEntityId": "Ward",
-    "entityInstanceIdName": "5600 PIE"
+    "entityInstanceIdName": "SecTestFormY"
   }
 ]

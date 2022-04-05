@@ -4,7 +4,6 @@ Cypress.Commands.add('getRequest', (url, headers, itemsResponse, fileName) => {
         url: url,
         headers: headers
     }).then(function (response) {
-        console.log(response)
         expect(response.body).have.length(itemsResponse);
         cy.writeFile(fileName, response.body)
     });
