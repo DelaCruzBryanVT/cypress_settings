@@ -26,8 +26,8 @@
 
 Cypress.Commands.add('login', () => {
     cy.visit('https://debugsite.myequipe2/app/#/login/action/').then(x=>{
-        cy.get('input[name="username"]').type('')
-        cy.get('#passwordInput').type('')
+        cy.get('input[name="username"]').type('ca')
+        cy.get('#passwordInput').type('Qwerty.1234')
         cy.get('input[type=submit]').click()
         cy.visit('https://debugsite.myequipe2/app/#/settings/acff5f0f-b221-42be-b862-2ec5afb4a3a7/pluralform/config_care_folder_output_template_backup')
     })

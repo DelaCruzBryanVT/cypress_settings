@@ -1,0 +1,15 @@
+{
+    "basePath": "Base Path",
+    "careFolderOutputTemplateBackupNotificationType": 2,
+    "careFolderOutputTemplateBackupNotificationTypeId": "Always",
+    "careFolderOutputTemplateId": "TEST D",
+    "domainId": "00000000-3683-4007-bbc7-2b26cd7675b7",
+    "endDate": "30/04/2022",
+    "fromDate": "('-7d.PreviousMonday.StartOfDay')",
+    "minimumFreeSpaceInBytes": 4,
+    "name": "Test Cypress read JSON",
+    "notifyToEmail": "test@gamil.com",
+    "retentionCount": 2,
+    "startDate": "29/04/2022",
+    "toDate": "('+0d')"
+}
