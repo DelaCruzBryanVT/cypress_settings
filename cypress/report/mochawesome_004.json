@@ -1,0 +1,263 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2022-04-11T19:43:40.172Z",
+    "end": "2022-04-11T19:43:55.146Z",
+    "duration": 14974,
+    "testsRegistered": 9,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 8,
+    "hasSkipped": true
+  },
+  "results": [
+    {
+      "uuid": "02960941-0b5a-43c5-9886-edba60b89256",
+      "title": "",
+      "fullFile": "cypress/integration/crud_setting_care_folder_output_backup/crud_main_care_folder_setting.spec.js",
+      "file": "cypress/integration/crud_setting_care_folder_output_backup/crud_main_care_folder_setting.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "3c9ef40e-ae47-4187-95e5-77efcce147c9",
+          "title": "CRUD SETTING CARE FOLDER OUTPUT TEMPLATE BACKUP",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Filter Record. Section Care Folder Output Template Backup",
+              "fullTitle": "CRUD SETTING CARE FOLDER OUTPUT TEMPLATE BACKUP Filter Record. Section Care Folder Output Template Backup",
+              "timedOut": null,
+              "duration": 4322,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('.ui-grid-coluiGrid-0008 > .sortable > [ui-grid-filter=\"\"] > .ui-grid-filter-container > [ng-if=\"colFilter.type !== \\'select\\'\"] > .ui-grid-filter-input').type(filterText);\ncy.get(\".grid\").then(x => {\n  cy.get(\".ui-grid-canvas\").should(\"have.length\", 2).and($tr => {\n    expect($tr.get(1).textContent, \"Filter\").to.contains(filterText);\n  });\n});\ncy.pause();",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `input[name=\"username\"]`, but never found it.\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `CRUD SETTING CARE FOLDER OU...`",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `input[name=\"username\"]`, but never found it.\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `CRUD SETTING CARE FOLDER OU...`\n    at Context.eval (https://debugsite.myequipe2/__cypress/tests?p=cypress\\support\\index.js:126:8)",
+                "diff": null
+              },
+              "uuid": "1f3a9533-d32c-43e6-96ef-c1171eb63a15",
+              "parentUUID": "3c9ef40e-ae47-4187-95e5-77efcce147c9",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Validate Select List",
+              "fullTitle": "CRUD SETTING CARE FOLDER OUTPUT TEMPLATE BACKUP Validate Select List",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('[ng-click=\"vm.addNewWrapped()\"]').click();\ncy.validateSelectList('#Id_CareFolderOutputTemplate_CareFolderOutputTemplateBackup');\ncy.pause();",
+              "err": {},
+              "uuid": "70e29608-eeb1-4164-a8f3-14e9dfaa636b",
+              "parentUUID": "3c9ef40e-ae47-4187-95e5-77efcce147c9",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "Save Button. Section Care Folder Output Template Backup",
+              "fullTitle": "CRUD SETTING CARE FOLDER OUTPUT TEMPLATE BACKUP Save Button. Section Care Folder Output Template Backup",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.saveCareFolderOutputTemplateBackup('TEST D', 'TEST CYPRESS SAVE BUTTON', 'TEST CYPRESS SAVE BUTTON', 'cypress@gmail.com', 'Always').then($respose => {\n  cy.get('.marg-top-20 > .green').click();\n});\ncy.pause();",
+              "err": {},
+              "uuid": "498738d9-35fe-49cf-92fb-293046abc4c6",
+              "parentUUID": "3c9ef40e-ae47-4187-95e5-77efcce147c9",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "Cancel Button Without Changes.  Section Care Folder Output Template Backup",
+              "fullTitle": "CRUD SETTING CARE FOLDER OUTPUT TEMPLATE BACKUP Cancel Button Without Changes.  Section Care Folder Output Template Backup",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(\".ui-grid-col-align\").contains('TEST CYPRESS SAVE BUTTON').first().dblclick();\ncy.get('.marg-top-20 > .white-border').click();\ncy.get(\".grid\").then(x => {\n  cy.get(\".ui-grid-canvas\").should(\"have.length\", 2);\n});\ncy.pause();",
+              "err": {},
+              "uuid": "666ae33c-747c-4ed5-8724-bf48e176a458",
+              "parentUUID": "3c9ef40e-ae47-4187-95e5-77efcce147c9",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "Cancel Button With Changes.  Section Care Folder Output Template Backup",
+              "fullTitle": "CRUD SETTING CARE FOLDER OUTPUT TEMPLATE BACKUP Cancel Button With Changes.  Section Care Folder Output Template Backup",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(\".ui-grid-col-align\").contains('TEST CYPRESS').first().dblclick();\ncy.get('#Id_CareFolderOutputTemplate_CareFolderOutputTemplateBackup').select('TEST D');\ncy.get('#Name_CareFolderOutputTemplateBackup').clear().wait(500);\ncy.get('#Name_CareFolderOutputTemplateBackup').type('TEST CYPRESS MODIFY');\ncy.get(\".timepicker-button\").first().click();\ncy.get(\".timepicker-button\").eq(1).click();\ncy.get('#BasePath_CareFolderOutputTemplateBackup').clear().wait(500);\ncy.get('#BasePath_CareFolderOutputTemplateBackup').type('TEST CYPRESS SAVE MODIFY');\ncy.get('#NotifyToEmail_CareFolderOutputTemplateBackup').clear().wait(500);\ncy.get('#NotifyToEmail_CareFolderOutputTemplateBackup').type('cypress@gmail.com');\ncy.get('#Id_CareFolderOutputTemplateBackupNotificationType_CareFolderOutputTemplateBackup').select('Always');\ncy.get('.marg-top-20 > .white-border').click();\ncy.get('.button-group > .marg-right-butt10').click();\ncy.get(\".grid\").then(x => {\n  cy.get(\".ui-grid-canvas\").should(\"have.length\", 2);\n});\ncy.pause();",
+              "err": {},
+              "uuid": "08663c3f-d9e8-4a84-af38-513249fe9fa8",
+              "parentUUID": "3c9ef40e-ae47-4187-95e5-77efcce147c9",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "Save and Stay Button. Section Care Folder Output Template Backup",
+              "fullTitle": "CRUD SETTING CARE FOLDER OUTPUT TEMPLATE BACKUP Save and Stay Button. Section Care Folder Output Template Backup",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.saveCareFolderOutputTemplateBackup('TEST D', 'TEST CYPRESS SAVE & STAY', 'TEST CYPRESS SAVE & STAY', 'cypress@gmail.com', 'Always').then($response => {\n  cy.get('[ng-click=\"vm.objParams.functions._save(vm.objParams.current, form, true)\"]').click();\n});\ncy.pause();",
+              "err": {},
+              "uuid": "e00c2892-bc4b-40ee-8fff-b40734dbc703",
+              "parentUUID": "3c9ef40e-ae47-4187-95e5-77efcce147c9",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "Save Button When Record Exists. Section Care Folder Output Template Backup",
+              "fullTitle": "CRUD SETTING CARE FOLDER OUTPUT TEMPLATE BACKUP Save Button When Record Exists. Section Care Folder Output Template Backup",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.updateCareFolderOutputTemplateBackup('TEST CYPRESS SAVE BUTTON', 'TEST D', 'TEST CYPRESS MODIFY', 'TEST CYPRESS SAVE MODIFY', 'cypressmodify@gmail.com', 'Always');\ncy.get('.marg-top-20 > .green').click();\ncy.pause();",
+              "err": {},
+              "uuid": "1925717f-1b59-40ae-a8b5-0a0f2df688f5",
+              "parentUUID": "3c9ef40e-ae47-4187-95e5-77efcce147c9",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "Delete Simple Record. Section Care Folder Output Template Backup",
+              "fullTitle": "CRUD SETTING CARE FOLDER OUTPUT TEMPLATE BACKUP Delete Simple Record. Section Care Folder Output Template Backup",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(\".ui-grid-col-align\").contains('TEST CYPRESS MODIFY').first().click().then(x => {\n  cy.get('.red').click().then(res => {\n    cy.get('.button-group > .marg-right-butt10').click();\n  });\n});\ncy.pause();",
+              "err": {},
+              "uuid": "ffb6882d-b901-4da7-939e-d2b8c263ecd8",
+              "parentUUID": "3c9ef40e-ae47-4187-95e5-77efcce147c9",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "Delete Multiple Records. Section Care Folder Output Template Backup",
+              "fullTitle": "CRUD SETTING CARE FOLDER OUTPUT TEMPLATE BACKUP Delete Multiple Records. Section Care Folder Output Template Backup",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.saveCareFolderOutputTemplateBackup('TEST D', '1 TEST CYPRESS SAVE BUTTON', 'TEST CYPRESS SAVE BUTTON', 'cypress@gmail.com', 'Always').then($response => {\n  cy.get('.marg-top-20 > .green').click().then(x => {\n    cy.saveCareFolderOutputTemplateBackup('TEST D', '2 TEST CYPRESS SAVE BUTTON', 'TEST CYPRESS SAVE BUTTON', 'cypress@gmail.com', 'Always');\n    cy.get('.marg-top-20 > .green').click().then(x => {\n      cy.get(\".ui-grid-col-left-nowrap-tooltip\").its(\"length\").then(element => {\n        numberFila = element;\n        cy.get(\".ui-grid-col-left-nowrap-tooltip\").its(\"length\").should(\"be.eq\", numberFila);\n        cy.get('.ui-grid-cell-contents > .ui-grid-selection-row-header-buttons').eq(1).click();\n        cy.get('.ui-grid-cell-contents > .ui-grid-selection-row-header-buttons').eq(2).click();\n        cy.get('.red').click().then(x => {\n          cy.get('.button-group > .marg-right-butt10').click();\n          cy.reload().then(response => {\n            cy.get(\".ui-grid-col-left-nowrap-tooltip\").its(\"length\").should(\"be.eq\", numberFila - 4);\n          });\n        });\n      });\n    });\n  });\n});\ncy.pause();",
+              "err": {},
+              "uuid": "c115a0c5-2267-418e-bb2e-ad95b49e07ae",
+              "parentUUID": "3c9ef40e-ae47-4187-95e5-77efcce147c9",
+              "isHook": false,
+              "skipped": true
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "1f3a9533-d32c-43e6-96ef-c1171eb63a15"
+          ],
+          "pending": [],
+          "skipped": [
+            "70e29608-eeb1-4164-a8f3-14e9dfaa636b",
+            "498738d9-35fe-49cf-92fb-293046abc4c6",
+            "666ae33c-747c-4ed5-8724-bf48e176a458",
+            "08663c3f-d9e8-4a84-af38-513249fe9fa8",
+            "e00c2892-bc4b-40ee-8fff-b40734dbc703",
+            "1925717f-1b59-40ae-a8b5-0a0f2df688f5",
+            "ffb6882d-b901-4da7-939e-d2b8c263ecd8",
+            "c115a0c5-2267-418e-bb2e-ad95b49e07ae"
+          ],
+          "duration": 4322,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "charts": true,
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress/report"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

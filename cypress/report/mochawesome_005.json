@@ -1,0 +1,263 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2022-04-11T19:43:59.846Z",
+    "end": "2022-04-11T19:44:14.736Z",
+    "duration": 14890,
+    "testsRegistered": 9,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 8,
+    "hasSkipped": true
+  },
+  "results": [
+    {
+      "uuid": "1dc827c2-6420-4e28-be0b-0d2558a05f6e",
+      "title": "",
+      "fullFile": "cypress/integration/crud_setting_care_folder_output_backup/crud_section_ac.spec.js",
+      "file": "cypress/integration/crud_setting_care_folder_output_backup/crud_section_ac.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "78e13ff9-40f0-4ddf-b0dd-c1f353355f7f",
+          "title": "CRUD SETTING SECTION ASSOCIATED CONTEXT",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Save Button. Section Associated Context",
+              "fullTitle": "CRUD SETTING SECTION ASSOCIATED CONTEXT Save Button. Section Associated Context",
+              "timedOut": null,
+              "duration": 14784,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.saveCareFolderOutputTemplateBackup('TEST D', 'TEST CYPRESS MAIN', 'TEST CYPRESS MAIN', 'cypressmain@gmail.com', 'Always');\ncy.get('.expander-blue').first().click().then(x => {\n  cy.get('.radio-accordion-header-left').contains('Associated Contexts').then(x => {\n    cy.get('.marg-right-butt1').eq(1).click({\n      force: true\n    }).then(res => {\n      cy.get('.disabled').first().click({\n        force: true\n      }).then(reponse => {\n        cy.saveAsociatedContext(\"Sec\", \"aaa\", \"TEST CYPRESS\").then(reponse => {\n          cy.get('.green').eq(1).click({\n            force: true\n          });\n        });\n      });\n    });\n  });\n});\ncy.get('.dropdown-menu').invoke('css', 'display', 'none');\ncy.pause();",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `input[name=\"username\"]`, but never found it.\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `CRUD SETTING SECTION ASSOCI...`",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `input[name=\"username\"]`, but never found it.\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `CRUD SETTING SECTION ASSOCI...`\n    at Context.eval (https://debugsite.myequipe2/__cypress/tests?p=cypress\\support\\index.js:126:8)",
+                "diff": null
+              },
+              "uuid": "1f1585ab-5774-4db3-8efb-bb6408085570",
+              "parentUUID": "78e13ff9-40f0-4ddf-b0dd-c1f353355f7f",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Cancel Button Without Changes. Section Associated Context",
+              "fullTitle": "CRUD SETTING SECTION ASSOCIATED CONTEXT Cancel Button Without Changes. Section Associated Context",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(\".ui-grid-col-align\").contains('TEST CYPRESS MAIN').first().dblclick();\ncy.wait(5000);\ncy.get('.expander-blue').first().click().then(x => {\n  cy.get('.radio-accordion-header-left').contains('Associated Contexts').then(x => {\n    cy.get(\".ui-grid-col-align\").contains('aaa').first().dblclick();\n    cy.get('.marg-top-20 > .white-border').click();\n    cy.wait(1000);\n  });\n  cy.get('.radio-accordion-header-left').contains('Associated Contexts').then(x => {\n    cy.get(\".grid\").then(x => {\n      cy.get(\".ui-grid-col-align\");\n    });\n  });\n});\ncy.get('.dropdown-menu').invoke('css', 'display', 'none');\ncy.pause();",
+              "err": {},
+              "uuid": "1b2c541e-c3bb-4532-bb46-38cfb89f9777",
+              "parentUUID": "78e13ff9-40f0-4ddf-b0dd-c1f353355f7f",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "Cancel Button With Changes. Section Associated Context",
+              "fullTitle": "CRUD SETTING SECTION ASSOCIATED CONTEXT Cancel Button With Changes. Section Associated Context",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(\".ui-grid-col-align\").contains('TEST CYPRESS MAIN').first().dblclick();\ncy.wait(5000);\ncy.get('.expander-blue').first().click().then(x => {\n  cy.get('.radio-accordion-header-left').contains('Associated Contexts').then(x => {\n    cy.get(\".ui-grid-col-align\").contains('aaa').first().dblclick();\n    cy.validateSelectList('#Id_Entity_CareFolderOutputTemplateBackupHasContext');\n    cy.get('#Id_Entity_CareFolderOutputTemplateBackupHasContext').select(\"Sec\");\n    cy.wait(4000);\n    cy.validateSelectList('#EntityInstanceId_CareFolderOutputTemplateBackupHasContext');\n    cy.get('#EntityInstanceId_CareFolderOutputTemplateBackupHasContext').select(\"ACU/DH 1\");\n    cy.get('#checkIsEnabled_CareFolderOutputTemplateBackupHasContext').click({\n      force: true\n    });\n    cy.get('#BasePath_CareFolderOutputTemplateBackupHasContext').type(\"TEST CYPRESS\");\n    cy.get('.marg-top-20 > .white-border').click();\n    cy.get('.button-group > .marg-right-butt10').click();\n    cy.wait(1000);\n  });\n  cy.get('.radio-accordion-header-left').contains('Associated Contexts').then(x => {\n    cy.get(\".grid\").then(x => {\n      cy.get(\".ui-grid-col-align\");\n    });\n  });\n});\ncy.get('.dropdown-menu').invoke('css', 'display', 'none');\ncy.pause();",
+              "err": {},
+              "uuid": "11c42d28-9953-41b7-8d25-8c665c5c6958",
+              "parentUUID": "78e13ff9-40f0-4ddf-b0dd-c1f353355f7f",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "Save and Stay Button. Section Associated Context",
+              "fullTitle": "CRUD SETTING SECTION ASSOCIATED CONTEXT Save and Stay Button. Section Associated Context",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(\".ui-grid-col-align\").contains('TEST CYPRESS MAIN').first().dblclick().then(resp => {\n  cy.get('.expander-blue').first().click({\n    force: true\n  }).then(x => {\n    cy.get('.radio-accordion-header-left').contains('Associated Contexts').then(x => {\n      cy.get('.marg-right-butt1').eq(1).click({\n        force: true\n      }).then(res => {\n        cy.get('.disabled').first().click({\n          force: true\n        }).then(reponse => {\n          cy.saveAsociatedContext(\"Sec\", \"ACU/DH 1\", \"TEST CYPRESS\");\n          cy.get('[ng-click=\"vm.objParams.functions._save(vm.objParams.current, form, true)\"]').click({\n            force: true\n          });\n          cy.wait(4000);\n          cy.get('.marg-top-20 > .white-border').click({\n            force: true\n          });\n        });\n      });\n    });\n  });\n});\ncy.get('.dropdown-menu').invoke('css', 'display', 'none');\ncy.pause();",
+              "err": {},
+              "uuid": "afe873d7-6b50-4e81-bf7a-fb45fbc23d78",
+              "parentUUID": "78e13ff9-40f0-4ddf-b0dd-c1f353355f7f",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "Filter Record. Table Associated Context",
+              "fullTitle": "CRUD SETTING SECTION ASSOCIATED CONTEXT Filter Record. Table Associated Context",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(\".ui-grid-col-align\").contains('TEST CYPRESS MAIN').first().dblclick();\ncy.wait(5000);\ncy.get('.expander-blue').first().click().then(x => {\n  cy.get('.radio-accordion-header-left').contains('Associated Contexts').then(x => {\n    cy.get('.ui-grid-filter-input').eq(1).type('aaa');\n    cy.get(\".grid\").first().then(x => {\n      cy.get(\".ui-grid-canvas\").and($tr => {\n        expect($tr.get(1).textContent, \"Filter\").to.contains(\"aaa\");\n      });\n    });\n  });\n});\ncy.pause();",
+              "err": {},
+              "uuid": "ae03930a-d7d8-4084-8fee-abf3a427a897",
+              "parentUUID": "78e13ff9-40f0-4ddf-b0dd-c1f353355f7f",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "Select Record And Update Record. Associated Context",
+              "fullTitle": "CRUD SETTING SECTION ASSOCIATED CONTEXT Select Record And Update Record. Associated Context",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(\".ui-grid-col-align\").contains('TEST CYPRESS MAIN').first().dblclick();\ncy.wait(5000);\ncy.get('.expander-blue').first().click().then(x => {\n  cy.get('.radio-accordion-header-left').contains('Associated Contexts').then(x => {\n    cy.get(\".ui-grid-col-align\").contains('aaa').first().dblclick();\n    cy.saveAsociatedContext(\"Sec\", \"ACU/DH PIE\", \"TEST CYPRESS\");\n    cy.get('.green').eq(1).click({\n      force: true\n    });\n  });\n});\ncy.pause();",
+              "err": {},
+              "uuid": "4b9e1c4d-6adb-497e-8477-08e50eb37b25",
+              "parentUUID": "78e13ff9-40f0-4ddf-b0dd-c1f353355f7f",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "Delete Simple Record. Table Associated Context",
+              "fullTitle": "CRUD SETTING SECTION ASSOCIATED CONTEXT Delete Simple Record. Table Associated Context",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(\".ui-grid-col-align\").contains('TEST CYPRESS MAIN').first().dblclick().then(x => {\n  cy.wait(5000);\n  cy.get('.expander-blue').first().click({\n    force: true\n  }).then(x => {\n    cy.get('.radio-accordion-header-left').contains('Associated Contexts').then(x => {\n      cy.get(\".ui-grid-col-align\").contains('ACU/DH PIE').first().click();\n      cy.wait(4000);\n      cy.get('.red').first().click();\n      cy.wait(4000);\n      cy.get('.button-group > .marg-right-butt10').click();\n    });\n  });\n});\ncy.pause();",
+              "err": {},
+              "uuid": "340d8c21-4ddd-4980-a485-658ecfc946dc",
+              "parentUUID": "78e13ff9-40f0-4ddf-b0dd-c1f353355f7f",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "Delete Simple Record. Section Associated Context",
+              "fullTitle": "CRUD SETTING SECTION ASSOCIATED CONTEXT Delete Simple Record. Section Associated Context",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(\".ui-grid-col-align\").contains('TEST CYPRESS MAIN').first().dblclick();\ncy.wait(5000);\ncy.get('.expander-blue').first().click().then(x => {\n  cy.get('.radio-accordion-header-left').contains('Associated Contexts').then(x => {\n    cy.get('.marg-right-butt1').eq(1).click({\n      force: true\n    }).then(res => {\n      cy.get('.disabled').first().click({\n        force: true\n      }).then(reponse => {\n        cy.saveAsociatedContext(\"Sec\", \"aaa\", \"TEST CYPRESS\").then(reponse => {\n          cy.get('.green').eq(1).click({\n            force: true\n          });\n        });\n      });\n    });\n  });\n});\ncy.get('.expander-blue').first().click({\n  force: true\n}).then(x => {\n  cy.get('.radio-accordion-header-left').contains('Associated Contexts').then(x => {\n    cy.get(\".ui-grid-col-align\").contains('aaa').first().dblclick({\n      force: true\n    });\n    cy.get('.marg-top-20 > .red').click();\n    cy.get('.button-group > .marg-right-butt10').click();\n  });\n});\ncy.pause();",
+              "err": {},
+              "uuid": "c99c66cc-a9a5-487a-b1f0-4c5b8cf26f39",
+              "parentUUID": "78e13ff9-40f0-4ddf-b0dd-c1f353355f7f",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "Delete Multiple Records. Section Associated Context",
+              "fullTitle": "CRUD SETTING SECTION ASSOCIATED CONTEXT Delete Multiple Records. Section Associated Context",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(\".ui-grid-col-align\").contains('TEST CYPRESS MAIN').first().dblclick();\ncy.wait(5000);\ncy.get('.expander-blue').first().click({\n  force: true\n}).then(x => {\n  cy.get('.radio-accordion-header-left').contains('Associated Contexts').then(x => {\n    cy.get('.marg-right-butt1').eq(1).click({\n      force: true\n    }).then(res => {\n      cy.get('.disabled').first().click({\n        force: true\n      }).then(reponse => {\n        cy.saveAsociatedContext(\"Healthcare Facility\", \"STAB_W\", \"TEST CYPRESS\").then(reponse => {\n          cy.get('.green').eq(1).click({\n            force: true\n          });\n        });\n      });\n    });\n  });\n});\ncy.wait(5000);\ncy.get('.expander-blue').first().click({\n  force: true\n}).then(x => {\n  cy.get('.radio-accordion-header-left').contains('Associated Contexts').then(x => {\n    cy.get(\".ui-grid-col-left-nowrap-tooltip\").its(\"length\").then(element => {\n      numberFila = element;\n      cy.get(\".ui-grid-col-left-nowrap-tooltip\").its(\"length\").should(\"be.eq\", numberFila);\n      cy.get('.ui-grid-cell-contents > .ui-grid-selection-row-header-buttons').eq(1).click({\n        force: true\n      });\n      cy.get('.ui-grid-cell-contents > .ui-grid-selection-row-header-buttons').eq(2).click({\n        force: true\n      });\n      cy.pause();\n      cy.get('.red').first().click({\n        force: true\n      });\n      cy.wait(4000);\n      cy.get('.button-group > .marg-right-butt10').click({\n        force: true\n      });\n      cy.get(\".ui-grid-col-left-nowrap-tooltip\").its(\"length\").should(\"be.eq\", numberFila);\n    });\n  });\n});\ncy.pause();",
+              "err": {},
+              "uuid": "d269dd93-35c3-4393-a591-785da508445d",
+              "parentUUID": "78e13ff9-40f0-4ddf-b0dd-c1f353355f7f",
+              "isHook": false,
+              "skipped": true
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "1f1585ab-5774-4db3-8efb-bb6408085570"
+          ],
+          "pending": [],
+          "skipped": [
+            "1b2c541e-c3bb-4532-bb46-38cfb89f9777",
+            "11c42d28-9953-41b7-8d25-8c665c5c6958",
+            "afe873d7-6b50-4e81-bf7a-fb45fbc23d78",
+            "ae03930a-d7d8-4084-8fee-abf3a427a897",
+            "4b9e1c4d-6adb-497e-8477-08e50eb37b25",
+            "340d8c21-4ddd-4980-a485-658ecfc946dc",
+            "c99c66cc-a9a5-487a-b1f0-4c5b8cf26f39",
+            "d269dd93-35c3-4393-a591-785da508445d"
+          ],
+          "duration": 14784,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "charts": true,
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress/report"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

@@ -1,0 +1,263 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2022-04-11T19:44:35.052Z",
+    "end": "2022-04-11T19:44:45.816Z",
+    "duration": 10764,
+    "testsRegistered": 9,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 8,
+    "hasSkipped": true
+  },
+  "results": [
+    {
+      "uuid": "ae57c79f-2f26-4c8f-98be-0c28c67d974c",
+      "title": "",
+      "fullFile": "cypress/integration/crud_setting_care_folder_output_backup/crud_section_srl.spec.js",
+      "file": "cypress/integration/crud_setting_care_folder_output_backup/crud_section_srl.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "eca6857f-ff4a-4483-badd-cff86909fb04",
+          "title": "TEST SETTING ASSOCIATED REPORT LAUNCHER",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Save Button. Section Associated Report Launcher",
+              "fullTitle": "TEST SETTING ASSOCIATED REPORT LAUNCHER Save Button. Section Associated Report Launcher",
+              "timedOut": null,
+              "duration": 10686,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.saveCareFolderOutputTemplateBackup('TEST D', 'TEST CYPRESS REPORT LAUNCHER', 'TEST CYPRESS REPORT LAUNCHER', 'cypress@gmail.com', 'Always');\ncy.get('.expander-blue').eq(1).click().then(x => {\n  cy.get('.radio-accordion-header-left').contains('Associated Report Launcher').then(x => {\n    cy.wait(3000);\n    cy.get('.marg-right-butt1').eq(6).dblclick({\n      force: true\n    }).then(res => {\n      cy.get('.disabled').eq(1).click({\n        force: true\n      }).then(reponse => {\n        cy.validateSelectList('#Id_ReportLauncher_CareFolderOutputTemplateBackupHasReportLauncher');\n        cy.get('#Id_ReportLauncher_CareFolderOutputTemplateBackupHasReportLauncher').select('Report-INR-Launcher');\n        cy.get('#text_CustomParameters_CareFolderOutputTemplateBackupHasReportLauncher').type('TEST REPORT LAUNCHER LAUNCHER');\n        cy.get('#Filename_CareFolderOutputTemplateBackupHasReportLauncher').type('TEST LAUNCHER');\n        cy.get('.green').eq(1).click({\n          force: true\n        });\n        cy.get('.dropdown-menu').invoke('css', 'display', 'none');\n      });\n    });\n  });\n});\ncy.pause();",
+              "err": {
+                "message": "CypressError: `cy.type()` cannot accept an empty string. You need to actually type something.\n\nhttps://on.cypress.io/type\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `TEST SETTING ASSOCIATED REP...`",
+                "estack": "CypressError: `cy.type()` cannot accept an empty string. You need to actually type something.\n\nhttps://on.cypress.io/type\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `TEST SETTING ASSOCIATED REP...`\n    at Context.type (https://debugsite.myequipe2/__cypress/runner/cypress_runner.js:154724:76)\n    at Context.<anonymous> (https://debugsite.myequipe2/__cypress/runner/cypress_runner.js:173242:19)\nFrom Your Spec Code:\n    at Context.eval (https://debugsite.myequipe2/__cypress/tests?p=cypress\\support\\index.js:126:38)",
+                "diff": null
+              },
+              "uuid": "d9adbf5b-6a94-4366-8ce4-248afda7ca03",
+              "parentUUID": "eca6857f-ff4a-4483-badd-cff86909fb04",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Cancel Button Without Changes. Section Associated Report Launcher",
+              "fullTitle": "TEST SETTING ASSOCIATED REPORT LAUNCHER Cancel Button Without Changes. Section Associated Report Launcher",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(\".ui-grid-col-align\").contains('TEST CYPRESS REPORT LAUNCHER').first().dblclick();\ncy.wait(5000);\ncy.get('.expander-blue').eq(1).click().then(x => {\n  cy.get('.radio-accordion-header-left').contains('Associated Report Launcher').then(x => {\n    cy.get(\".ui-grid-col-align\").contains('Report-INR-Launcher').first().dblclick();\n    cy.wait(3000);\n    cy.get('.marg-top-20 > .white-border').click();\n    cy.wait(1000);\n  });\n  cy.get('.radio-accordion-header-left').contains('Associated Report Launcher').then(x => {\n    cy.get(\".grid\").then(x => {\n      cy.get(\".ui-grid-col-align\");\n    });\n  });\n});\ncy.pause();",
+              "err": {},
+              "uuid": "c2bd7725-3c90-4a07-beac-31caa9a3e3f1",
+              "parentUUID": "eca6857f-ff4a-4483-badd-cff86909fb04",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "Cancel Button With Changes. Section Associated Report Launcher",
+              "fullTitle": "TEST SETTING ASSOCIATED REPORT LAUNCHER Cancel Button With Changes. Section Associated Report Launcher",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(\".ui-grid-col-align\").contains('TEST CYPRESS REPORT LAUNCHER').first().dblclick();\ncy.wait(5000);\ncy.get('.expander-blue').eq(1).click().then(x => {\n  cy.get('.radio-accordion-header-left').contains('Associated Report Launcher').then(x => {\n    cy.get(\".ui-grid-col-align\").contains('Report-INR-Launcher').first().dblclick();\n    cy.get('#Id_ReportLauncher_CareFolderOutputTemplateBackupHasReportLauncher').select('CrossDomain_PrescriptionDefinitionPlanner_Medication_Launcher');\n    cy.get('#text_CustomParameters_CareFolderOutputTemplateBackupHasReportLauncher').clear().wait(500).type('TEST REPORT LAUNCHER LAUNCHER');\n    cy.get('#Filename_CareFolderOutputTemplateBackupHasReportLauncher').clear().wait(500).type('TEST LAUNCHER');\n    cy.get('.marg-top-20 > .white-border').click();\n    cy.get('.button-group > .marg-right-butt10').click();\n    cy.wait(1000);\n  });\n  cy.get('.radio-accordion-header-left').contains('Associated Report Launcher').then(x => {\n    cy.get(\".grid\").then(x => {\n      cy.get(\".ui-grid-col-align\");\n    });\n  });\n});\ncy.pause();",
+              "err": {},
+              "uuid": "50031084-0471-4102-a61c-bd1e32262b75",
+              "parentUUID": "eca6857f-ff4a-4483-badd-cff86909fb04",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "Save and Stay Button. Section Associated Report Launcher",
+              "fullTitle": "TEST SETTING ASSOCIATED REPORT LAUNCHER Save and Stay Button. Section Associated Report Launcher",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(\".ui-grid-col-align\").contains('TEST CYPRESS REPORT LAUNCHER').first().dblclick();\ncy.wait(3000);\ncy.get('.expander-blue').eq(1).click({\n  force: true\n}).then(x => {\n  cy.wait(3000);\n  cy.get('.radio-accordion-header-left').contains('Associated Report Launcher').then(x => {\n    cy.wait(3000);\n    cy.get('.marg-right-butt1').eq(6).dblclick({\n      force: true\n    }).then(res => {\n      cy.get('.disabled').eq(1).click({\n        force: true\n      }).then(reponse => {\n        cy.get('#Id_ReportLauncher_CareFolderOutputTemplateBackupHasReportLauncher').select('CrossDomain_PrescriptionDefinitionPlanner_Medication_Launcher');\n        cy.get('#text_CustomParameters_CareFolderOutputTemplateBackupHasReportLauncher').clear().wait(500).type('TEST REPORT LAUNCHER LAUNCHER');\n        cy.get('#Filename_CareFolderOutputTemplateBackupHasReportLauncher').clear().wait(500).type('TEST LAUNCHER');\n        cy.get('[ng-click=\"vm.objParams.functions._save(vm.objParams.current, form, true)\"]').click({\n          force: true\n        });\n        cy.wait(4000);\n        cy.get('.marg-top-20 > .white-border').click({\n          force: true\n        });\n        cy.get('.dropdown-menu').invoke('css', 'display', 'none');\n      });\n    });\n  });\n});\ncy.pause();",
+              "err": {},
+              "uuid": "d3875bf9-53e4-487d-9958-1770c957318b",
+              "parentUUID": "eca6857f-ff4a-4483-badd-cff86909fb04",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "Filter Record. Table Associated Context",
+              "fullTitle": "TEST SETTING ASSOCIATED REPORT LAUNCHER Filter Record. Table Associated Context",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(\".ui-grid-col-align\").contains('TEST CYPRESS REPORT LAUNCHER').first().dblclick();\ncy.wait(5000);\ncy.get('.expander-blue').eq(1).click().then(x => {\n  cy.get('.radio-accordion-header-left').contains('Associated Report Launcher').then(x => {\n    cy.get('.ui-grid-filter-input').eq(2).clear().wait(500).type('Report-INR-Launcher');\n    cy.get(\".grid\").eq(1).then(x => {\n      cy.get(\".ui-grid-canvas\").eq(3).and($tr => {\n        expect($tr.get(0).textContent, \"Filter\").to.contains(\"Report-INR-Launcher\");\n      });\n    });\n  });\n});\ncy.pause();",
+              "err": {},
+              "uuid": "ba407340-6ef5-4aa6-9992-d343ff24aff5",
+              "parentUUID": "eca6857f-ff4a-4483-badd-cff86909fb04",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "Update Record. Section Associated Report Launcher",
+              "fullTitle": "TEST SETTING ASSOCIATED REPORT LAUNCHER Update Record. Section Associated Report Launcher",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(\".ui-grid-col-align\").contains('TEST CYPRESS REPORT LAUNCHER').first().dblclick();\ncy.wait(5000);\ncy.get('.expander-blue').eq(1).click().then(x => {\n  cy.get('.radio-accordion-header-left').contains('Associated Report Launcher').then(x => {\n    cy.get(\".ui-grid-col-align\").contains('Report-INR-Launcher').first().dblclick();\n    cy.get('#Id_ReportLauncher_CareFolderOutputTemplateBackupHasReportLauncher').select('CrossDomain-CareFolderCoverV2-Launcher');\n    cy.get('#text_CustomParameters_CareFolderOutputTemplateBackupHasReportLauncher').clear().wait(500).type('TEST REPORT LAUNCHER LAUNCHER MODIFY');\n    cy.get('#Filename_CareFolderOutputTemplateBackupHasReportLauncher').clear().wait(500).type('TEST LAUNCHER MODIFY');\n    cy.get('.green').eq(1).click({\n      force: true\n    });\n    cy.get('.dropdown-menu').invoke('css', 'display', 'none');\n  });\n});\ncy.pause();",
+              "err": {},
+              "uuid": "36731bea-e518-483b-a5c4-cfaaf76d36e4",
+              "parentUUID": "eca6857f-ff4a-4483-badd-cff86909fb04",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "Delete Simple Record. Table Associated Report Launcher",
+              "fullTitle": "TEST SETTING ASSOCIATED REPORT LAUNCHER Delete Simple Record. Table Associated Report Launcher",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(\".ui-grid-col-align\").contains('TEST CYPRESS REPORT LAUNCHER').first().dblclick();\ncy.wait(5000);\ncy.get('.expander-blue').eq(1).click().then(x => {\n  cy.get('.radio-accordion-header-left').contains('Associated Report Launcher').then(x => {\n    cy.get(\".ui-grid-col-align\").contains('CrossDomain-CareFolderCoverV2-Launcher').first().click();\n    cy.wait(4000);\n    cy.get('.red').eq(1).click();\n    cy.wait(4000);\n    cy.get('.button-group > .marg-right-butt10').click();\n    cy.wait(5000);\n  });\n});\ncy.pause();",
+              "err": {},
+              "uuid": "06a6c1c6-edf5-4870-988a-c62a647e046d",
+              "parentUUID": "eca6857f-ff4a-4483-badd-cff86909fb04",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "Delete Simple Record. Section Associated Report Launcher",
+              "fullTitle": "TEST SETTING ASSOCIATED REPORT LAUNCHER Delete Simple Record. Section Associated Report Launcher",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(\".ui-grid-col-align\").contains('TEST CYPRESS REPORT LAUNCHER').first().dblclick();\ncy.wait(4000);\ncy.get('.expander-blue').eq(1).click({\n  force: true\n}).then(x => {\n  cy.get('.radio-accordion-header-left').contains('Associated Report Launcher').then(x => {\n    cy.wait(3000);\n    cy.get('.marg-right-butt1').eq(6).dblclick({\n      force: true\n    }).then(res => {\n      cy.get('.disabled').eq(1).click({\n        force: true\n      }).then(reponse => {\n        cy.validateSelectList('#Id_ReportLauncher_CareFolderOutputTemplateBackupHasReportLauncher');\n        cy.get('#Id_ReportLauncher_CareFolderOutputTemplateBackupHasReportLauncher').select('Report-INR-Launcher');\n        cy.get('#text_CustomParameters_CareFolderOutputTemplateBackupHasReportLauncher').clear().wait(500).type('TEST REPORT LAUNCHER LAUNCHER');\n        cy.get('#Filename_CareFolderOutputTemplateBackupHasReportLauncher').clear().wait(500).type('TEST LAUNCHER');\n        cy.get('.green').eq(1).click({\n          force: true\n        });\n        cy.get('.dropdown-menu').invoke('css', 'display', 'none');\n      });\n    });\n  });\n});\ncy.wait(4000);\ncy.get('.expander-blue').eq(1).click({\n  force: true\n}).then(x => {\n  cy.get('.radio-accordion-header-left').contains('Associated Report Launcher').then(x => {\n    cy.get(\".ui-grid-col-align\").contains('Report-INR-Launcher').first().dblclick({\n      force: true\n    });\n    cy.get('.marg-top-20 > .red').click();\n    cy.get('.button-group > .marg-right-butt10').click();\n  });\n});\ncy.pause();",
+              "err": {},
+              "uuid": "56e13bcd-29e4-4d3b-b560-43979470d714",
+              "parentUUID": "eca6857f-ff4a-4483-badd-cff86909fb04",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "Delete Multiple Records. Section Associated Report Launcher",
+              "fullTitle": "TEST SETTING ASSOCIATED REPORT LAUNCHER Delete Multiple Records. Section Associated Report Launcher",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(\".ui-grid-col-align\").contains('TEST CYPRESS REPORT LAUNCHER').first().dblclick();\ncy.wait(5000);\ncy.get('.expander-blue').eq(1).click().then(x => {\n  cy.get('.radio-accordion-header-left').contains('Associated Report Launcher').then(x => {\n    cy.wait(3000);\n    cy.get('.marg-right-butt1').eq(6).dblclick({\n      force: true\n    }).then(res => {\n      cy.get('.disabled').eq(1).click({\n        force: true\n      }).then(reponse => {\n        cy.validateSelectList('#Id_ReportLauncher_CareFolderOutputTemplateBackupHasReportLauncher');\n        cy.get('#Id_ReportLauncher_CareFolderOutputTemplateBackupHasReportLauncher').select('Report-INR-Launcher');\n        cy.get('#text_CustomParameters_CareFolderOutputTemplateBackupHasReportLauncher').clear().wait(500).type('TEST REPORT LAUNCHER LAUNCHER');\n        cy.get('#Filename_CareFolderOutputTemplateBackupHasReportLauncher').clear().wait(500).type('TEST LAUNCHER');\n        cy.get('.green').eq(1).click({\n          force: true\n        });\n        cy.get('.dropdown-menu').invoke('css', 'display', 'none');\n      });\n    });\n  });\n});\ncy.wait(5000);\ncy.get('.expander-blue').eq(1).click({\n  force: true\n}).then(x => {\n  cy.get('.radio-accordion-header-left').contains('Associated Report Launcher').then(x => {\n    cy.get(\".ui-grid-col-left-nowrap-tooltip\").its(\"length\").then(element => {\n      numberFila = element;\n      cy.get(\".ui-grid-col-left-nowrap-tooltip\").its(\"length\").should(\"be.eq\", numberFila);\n      cy.get('.ui-grid-cell-contents > .ui-grid-selection-row-header-buttons').eq(2).click({\n        force: true\n      });\n      cy.get('.ui-grid-cell-contents > .ui-grid-selection-row-header-buttons').eq(3).click({\n        force: true\n      });\n      cy.pause();\n      cy.get('.red').eq(1).click({\n        force: true\n      });\n      cy.wait(4000);\n      cy.get('.button-group > .marg-right-butt10').click({\n        force: true\n      });\n      cy.get(\".ui-grid-col-left-nowrap-tooltip\").its(\"length\").should(\"be.eq\", numberFila);\n    });\n  });\n});\ncy.pause();",
+              "err": {},
+              "uuid": "0629a0e9-91c6-42f2-bf39-48179659adeb",
+              "parentUUID": "eca6857f-ff4a-4483-badd-cff86909fb04",
+              "isHook": false,
+              "skipped": true
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "d9adbf5b-6a94-4366-8ce4-248afda7ca03"
+          ],
+          "pending": [],
+          "skipped": [
+            "c2bd7725-3c90-4a07-beac-31caa9a3e3f1",
+            "50031084-0471-4102-a61c-bd1e32262b75",
+            "d3875bf9-53e4-487d-9958-1770c957318b",
+            "ba407340-6ef5-4aa6-9992-d343ff24aff5",
+            "36731bea-e518-483b-a5c4-cfaaf76d36e4",
+            "06a6c1c6-edf5-4870-988a-c62a647e046d",
+            "56e13bcd-29e4-4d3b-b560-43979470d714",
+            "0629a0e9-91c6-42f2-bf39-48179659adeb"
+          ],
+          "duration": 10686,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "charts": true,
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress/report"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

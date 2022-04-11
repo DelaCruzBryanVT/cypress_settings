@@ -1,0 +1,187 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2022-04-11T19:41:16.793Z",
+    "end": "2022-04-11T19:41:47.129Z",
+    "duration": 30336,
+    "testsRegistered": 5,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 4,
+    "hasSkipped": true
+  },
+  "results": [
+    {
+      "uuid": "149217fe-750a-488a-b03d-4dd0d6fd2749",
+      "title": "",
+      "fullFile": "cypress/integration/crud_setting_care_folder_output_backup_request/crud_main_care_folder_setting_request.spec.js",
+      "file": "cypress/integration/crud_setting_care_folder_output_backup_request/crud_main_care_folder_setting_request.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "dc0dd444-7146-4936-be39-63a7995fbf24",
+          "title": "TEST HTTP REQUEST CARE FOLDER OUTPUT TEMPLATE BACKUP",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "GET Care Folder Output Template Backup",
+              "fullTitle": "TEST HTTP REQUEST CARE FOLDER OUTPUT TEMPLATE BACKUP GET Care Folder Output Template Backup",
+              "timedOut": null,
+              "duration": 30262,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.getRequest('https://debugsite.myequipe2/webapi/api/v1/CareFolderOutputTemplateBackup/GetConfigurationList', headers, 17, 'cypress/fixtures/careFolderOutputTemplateBackup.json');\ncy.pause();",
+              "err": {
+                "message": "CypressError: `cy.request()` timed out waiting `30000ms` for a response from your server.\n\nThe request we sent was:\n\nMethod: POST\nURL: https://debugsite.myequipe2/webapi/api/v1/Session/Login\n\nNo response was received within the timeout.\n\nhttps://on.cypress.io/request\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `TEST HTTP REQUEST CARE FOLD...`",
+                "estack": "CypressError: `cy.request()` timed out waiting `30000ms` for a response from your server.\n\nThe request we sent was:\n\nMethod: POST\nURL: https://debugsite.myequipe2/webapi/api/v1/Session/Login\n\nNo response was received within the timeout.\n\nhttps://on.cypress.io/request\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `TEST HTTP REQUEST CARE FOLD...`\n    at https://debugsite.myequipe2/__cypress/runner/cypress_runner.js:160677:78\n    at tryCatcher (https://debugsite.myequipe2/__cypress/runner/cypress_runner.js:13022:23)\n    at https://debugsite.myequipe2/__cypress/runner/cypress_runner.js:8144:41\n    at tryCatcher (https://debugsite.myequipe2/__cypress/runner/cypress_runner.js:13022:23)\n    at Promise._settlePromiseFromHandler (https://debugsite.myequipe2/__cypress/runner/cypress_runner.js:10957:31)\n    at Promise._settlePromise (https://debugsite.myequipe2/__cypress/runner/cypress_runner.js:11014:18)\n    at Promise._settlePromise0 (https://debugsite.myequipe2/__cypress/runner/cypress_runner.js:11059:10)\n    at Promise._settlePromises (https://debugsite.myequipe2/__cypress/runner/cypress_runner.js:11135:18)\n    at _drainQueueStep (https://debugsite.myequipe2/__cypress/runner/cypress_runner.js:7729:12)\n    at _drainQueue (https://debugsite.myequipe2/__cypress/runner/cypress_runner.js:7722:9)\n    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (https://debugsite.myequipe2/__cypress/runner/cypress_runner.js:7738:5)\n    at Async.drainQueues (https://debugsite.myequipe2/__cypress/runner/cypress_runner.js:7608:14)\nFrom Your Spec Code:\n    at Context.eval (https://debugsite.myequipe2/__cypress/tests?p=cypress\\integration\\crud_setting_care_folder_output_backup_request\\crud_main_care_folder_setting_request.spec.js:109:8)",
+                "diff": null
+              },
+              "uuid": "2320e2cb-b6c8-409b-b415-82e36c59dc88",
+              "parentUUID": "dc0dd444-7146-4936-be39-63a7995fbf24",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "POST Care Folder Output Template Backup",
+              "fullTitle": "TEST HTTP REQUEST CARE FOLDER OUTPUT TEMPLATE BACKUP POST Care Folder Output Template Backup",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "let body = {\n  $id: \"0\",\n  basePath: \"TEST CYPRESS HTTP REQUEST\",\n  careFolderOutputTemplateBackupNotificationTypeId: 1,\n  careFolderOutputTemplateId: \"d01d5ce4-71d2-e7fc-b2a5-8de6c0055309\",\n  deleteFolderOnFailure: true,\n  endDate: \"2022-03-23T23:00:00.000Z\",\n  fromDate: \"('-7d.PreviousMonday.StartOfDay')\",\n  id: idGuid,\n  includeDischargedHospitalizations: false,\n  isEnabled: false,\n  minimumFreeSpaceInBytes: null,\n  name: \"TEST CYPRESS HTTP REQUEST\",\n  notifyToEmail: null,\n  retentionCount: null,\n  startDate: \"2022-03-23T23:00:00.000Z\",\n  toDate: \"('+0d')\"\n};\ncy.postRequest('https://debugsite.myequipe2/webapi/api/v1/CareFolderOutputTemplateBackupSettings/Save', headers, body, idGuid, 0);\ncy.pause();",
+              "err": {},
+              "uuid": "f85cf937-07cf-4729-a16e-a39ec7150a81",
+              "parentUUID": "dc0dd444-7146-4936-be39-63a7995fbf24",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "GET ítem Care Folder Output Template Backup",
+              "fullTitle": "TEST HTTP REQUEST CARE FOLDER OUTPUT TEMPLATE BACKUP GET ítem Care Folder Output Template Backup",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.request({\n  method: \"POST\",\n  url: \"https://debugsite.myequipe2/webapi/api/v1/CareFolderOutputTemplateBackupSettings/Read\",\n  body: {\n    $id: \"0\",\n    id: idGuid\n  },\n  headers: headers\n}).then(function (response) {\n  expect(response.body.name).eq(\"TEST CYPRESS HTTP REQUEST\");\n  cy.pause();\n});",
+              "err": {},
+              "uuid": "8d01dffd-d144-4c90-ab5a-abea04e8e992",
+              "parentUUID": "dc0dd444-7146-4936-be39-63a7995fbf24",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": " Delete from table, Care Folder Output Template Backup",
+              "fullTitle": "TEST HTTP REQUEST CARE FOLDER OUTPUT TEMPLATE BACKUP  Delete from table, Care Folder Output Template Backup",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.request({\n  method: \"POST\",\n  url: \"https://debugsite.myequipe2/webapi/api/v1/CareFolderOutputTemplateBackupSettings/DeleteMultiple\",\n  body: {\n    $id: \"0\",\n    ids: [{\n      $id: \"2\",\n      value: idGuid\n    }]\n  },\n  headers: headers\n}).then(function (response) {\n  expect(response.body).to.deep.equal(0);\n  cy.pause();\n});",
+              "err": {},
+              "uuid": "5cce0d3f-2859-4b25-9117-cdce10415090",
+              "parentUUID": "dc0dd444-7146-4936-be39-63a7995fbf24",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": " Delete from Form, Care Folder Output Template Backup",
+              "fullTitle": "TEST HTTP REQUEST CARE FOLDER OUTPUT TEMPLATE BACKUP  Delete from Form, Care Folder Output Template Backup",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.request({\n  method: \"DELETE\",\n  url: \"https://debugsite.myequipe2/webapi/api/v1/CareFolderOutputTemplateBackupSettings/Delete?id=\" + deleteValue,\n  body: {\n    $id: \"0\",\n    ids: [{\n      $id: \"2\",\n      value: deleteValue\n    }]\n  },\n  headers: headers\n}).then(function (response) {\n  expect(response.body).to.deep.equal(0);\n  cy.pause();\n});",
+              "err": {},
+              "uuid": "91c5ac10-2628-4753-b74a-3ab692a2b268",
+              "parentUUID": "dc0dd444-7146-4936-be39-63a7995fbf24",
+              "isHook": false,
+              "skipped": true
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "2320e2cb-b6c8-409b-b415-82e36c59dc88"
+          ],
+          "pending": [],
+          "skipped": [
+            "f85cf937-07cf-4729-a16e-a39ec7150a81",
+            "8d01dffd-d144-4c90-ab5a-abea04e8e992",
+            "5cce0d3f-2859-4b25-9117-cdce10415090",
+            "91c5ac10-2628-4753-b74a-3ab692a2b268"
+          ],
+          "duration": 30262,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "charts": true,
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress/report"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

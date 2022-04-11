@@ -1,0 +1,263 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2022-04-11T19:44:19.657Z",
+    "end": "2022-04-11T19:44:31.057Z",
+    "duration": 11400,
+    "testsRegistered": 9,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 8,
+    "hasSkipped": true
+  },
+  "results": [
+    {
+      "uuid": "44837fb1-df74-45d4-9d61-204efccc5fa2",
+      "title": "",
+      "fullFile": "cypress/integration/crud_setting_care_folder_output_backup/crud_section_as.spec.js",
+      "file": "cypress/integration/crud_setting_care_folder_output_backup/crud_section_as.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "14b8c93f-e025-46c3-b42c-f33a23bcdd7f",
+          "title": "TEST SETTING ASSOCIATED SCHEDULES",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Save Button. Section Associated Schedules",
+              "fullTitle": "TEST SETTING ASSOCIATED SCHEDULES Save Button. Section Associated Schedules",
+              "timedOut": null,
+              "duration": 11282,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.saveCareFolderOutputTemplateBackup('TEST D', 'TEST CYPRESS ASOCIATED SCHEDULES', 'TEST CYPRESS ASOCIATED SCHEDULES', 'cypress@gmail.com', 'Always');\ncy.get('.expander-blue').eq(2).click({\n  force: true\n}).then(x => {\n  cy.get('.radio-accordion-header-left').contains('Associated Schedules').then(x => {\n    cy.wait(3000);\n    cy.get('.marg-right-butt1').eq(11).dblclick({\n      force: true\n    }).then(res => {\n      cy.get('.disabled').eq(2).click({\n        force: true\n      }).then(reponse => {\n        cy.get('#MaxDegreeOfParallelism_CareFolderOutputTemplateBackupHasSchedule').type('4');\n        cy.get('#checkWaitForPreviousToComplete_CareFolderOutputTemplateBackupHasSchedule').click({\n          force: true\n        });\n        cy.get('#RetryCount_CareFolderOutputTemplateBackupHasSchedule').type('4');\n        cy.get('#TimeoutInSeconds_CareFolderOutputTemplateBackupHasSchedule').type('4');\n        cy.get('.green').eq(1).click({\n          force: true\n        }).then(response => {\n          cy.get('.dropdown-menu').invoke('css', 'display', 'none');\n        });\n      });\n    });\n  });\n  cy.wait(20000);\n});",
+              "err": {
+                "message": "CypressError: `cy.type()` cannot accept an empty string. You need to actually type something.\n\nhttps://on.cypress.io/type\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `TEST SETTING ASSOCIATED SCH...`",
+                "estack": "CypressError: `cy.type()` cannot accept an empty string. You need to actually type something.\n\nhttps://on.cypress.io/type\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `TEST SETTING ASSOCIATED SCH...`\n    at Context.type (https://debugsite.myequipe2/__cypress/runner/cypress_runner.js:154724:76)\n    at Context.<anonymous> (https://debugsite.myequipe2/__cypress/runner/cypress_runner.js:173242:19)\nFrom Your Spec Code:\n    at Context.eval (https://debugsite.myequipe2/__cypress/tests?p=cypress\\support\\index.js:126:38)",
+                "diff": null
+              },
+              "uuid": "2837d51e-901f-44bc-abce-ce8e7b65173a",
+              "parentUUID": "14b8c93f-e025-46c3-b42c-f33a23bcdd7f",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Cancel Button Without Changes. Section Associated Schedules",
+              "fullTitle": "TEST SETTING ASSOCIATED SCHEDULES Cancel Button Without Changes. Section Associated Schedules",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(\".ui-grid-col-align\").contains('TEST CYPRESS ASOCIATED SCHEDULES').first().dblclick();\ncy.wait(5000);\ncy.get('.expander-blue').eq(2).click().then(x => {\n  cy.get('.radio-accordion-header-left').contains('Associated Schedules').then(x => {\n    cy.get(\".ui-grid-col-align\").contains('4').first().dblclick();\n    cy.get('.marg-top-20 > .white-border').click();\n    cy.wait(1000);\n  });\n  cy.get('.radio-accordion-header-left').contains('Associated Schedules').then(x => {\n    cy.get(\".grid\").then(x => {\n      cy.get(\".ui-grid-col-align\");\n    });\n  });\n});",
+              "err": {},
+              "uuid": "ab1b274d-037b-40cf-9e24-8dcd402a94f0",
+              "parentUUID": "14b8c93f-e025-46c3-b42c-f33a23bcdd7f",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "Cancel Button With Changes. Section Associated Schedules",
+              "fullTitle": "TEST SETTING ASSOCIATED SCHEDULES Cancel Button With Changes. Section Associated Schedules",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(\".ui-grid-col-align\").contains('TEST CYPRESS ASOCIATED SCHEDULES').first().dblclick();\ncy.wait(5000);\ncy.get('.expander-blue').eq(2).click().then(x => {\n  cy.get('.radio-accordion-header-left').contains('Associated Schedules').then(x => {\n    cy.get(\".ui-grid-col-align\").contains('4').first().dblclick();\n    cy.get('#MaxDegreeOfParallelism_CareFolderOutputTemplateBackupHasSchedule').clear();\n    cy.wait(2000);\n    cy.get('#MaxDegreeOfParallelism_CareFolderOutputTemplateBackupHasSchedule').type('2');\n    cy.get('#checkWaitForPreviousToComplete_CareFolderOutputTemplateBackupHasSchedule').click({\n      force: true\n    });\n    cy.get('#RetryCount_CareFolderOutputTemplateBackupHasSchedule').clear();\n    cy.wait(2000);\n    cy.get('#RetryCount_CareFolderOutputTemplateBackupHasSchedule').type('2');\n    cy.get('#TimeoutInSeconds_CareFolderOutputTemplateBackupHasSchedule').clear();\n    cy.wait(2000);\n    cy.get('#TimeoutInSeconds_CareFolderOutputTemplateBackupHasSchedule').type('2');\n    cy.get('.marg-top-20 > .white-border').click();\n    cy.get('.button-group > .marg-right-butt10').click();\n    cy.wait(1000);\n  });\n  cy.get('.radio-accordion-header-left').contains('Associated Schedules').then(x => {\n    cy.get(\".grid\").then(x => {\n      cy.get(\".ui-grid-col-align\");\n    });\n  });\n});",
+              "err": {},
+              "uuid": "e1660c4d-6a0c-4e41-b03e-125c96706172",
+              "parentUUID": "14b8c93f-e025-46c3-b42c-f33a23bcdd7f",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "Save and Stay Button. Section Associated Schedules",
+              "fullTitle": "TEST SETTING ASSOCIATED SCHEDULES Save and Stay Button. Section Associated Schedules",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(\".ui-grid-col-align\").contains('TEST CYPRESS ASOCIATED SCHEDULES').first().dblclick();\ncy.wait(3000);\ncy.get('.expander-blue').eq(2).click({\n  force: true\n}).then(x => {\n  cy.wait(3000);\n  cy.get('.radio-accordion-header-left').contains('Associated Schedules').then(x => {\n    cy.wait(3000);\n    cy.get('.marg-right-butt1').eq(11).dblclick({\n      force: true\n    }).then(res => {\n      cy.get('.disabled').eq(2).click({\n        force: true\n      }).then(reponse => {\n        cy.get('#MaxDegreeOfParallelism_CareFolderOutputTemplateBackupHasSchedule').type('5');\n        cy.get('#checkWaitForPreviousToComplete_CareFolderOutputTemplateBackupHasSchedule').click({\n          force: true\n        });\n        cy.get('#RetryCount_CareFolderOutputTemplateBackupHasSchedule').type('5');\n        cy.get('#TimeoutInSeconds_CareFolderOutputTemplateBackupHasSchedule').type('5');\n        cy.get('[ng-click=\"vm.objParams.functions._save(vm.objParams.current, form, true)\"]').click({\n          force: true\n        });\n        cy.wait(20000);\n        cy.get('.marg-top-20 > .white-border').click({\n          force: true\n        });\n        cy.get('.dropdown-menu').invoke('css', 'display', 'none');\n      });\n    });\n  });\n});",
+              "err": {},
+              "uuid": "df70e030-33e9-4676-a4ec-c892215f8a01",
+              "parentUUID": "14b8c93f-e025-46c3-b42c-f33a23bcdd7f",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "Filter Record. Section Table Associated Schedules",
+              "fullTitle": "TEST SETTING ASSOCIATED SCHEDULES Filter Record. Section Table Associated Schedules",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(\".ui-grid-col-align\").contains('TEST CYPRESS ASOCIATED SCHEDULES').first().dblclick();\ncy.wait(5000);\ncy.get('.expander-blue').eq(2).click({\n  force: true\n}).then(x => {\n  cy.get('.radio-accordion-header-left').contains('Associated Schedules').then(x => {\n    cy.get('.ui-grid-filter-input').eq(4).type('4');\n    cy.get(\".grid\").eq(2).then(x => {\n      cy.get(\".ui-grid-canvas\").eq(5).and($tr => {\n        expect($tr.get(0).textContent, \"Filter\").to.contains(\"4\");\n      });\n    });\n  });\n});",
+              "err": {},
+              "uuid": "4acfa6b6-9ab3-4e7e-aaa3-0806839433ce",
+              "parentUUID": "14b8c93f-e025-46c3-b42c-f33a23bcdd7f",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "Update Button. Section Associated Schedules",
+              "fullTitle": "TEST SETTING ASSOCIATED SCHEDULES Update Button. Section Associated Schedules",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(\".ui-grid-col-align\").contains('TEST CYPRESS ASOCIATED SCHEDULES').first().dblclick();\ncy.wait(5000);\ncy.get('.expander-blue').eq(2).click({\n  force: true\n}).then(x => {\n  cy.get('.radio-accordion-header-left').contains('Associated Schedules').then(x => {\n    cy.get(\".ui-grid-col-align\").contains('4').first().dblclick().then(response => {\n      cy.wait(1000);\n      cy.get('#checkIsEnabled_CareFolderOutputTemplateBackupHasSchedule').click({\n        force: true\n      });\n      cy.get('#MaxDegreeOfParallelism_CareFolderOutputTemplateBackupHasSchedule').clear().wait(2000).type('2');\n      cy.get('#checkWaitForPreviousToComplete_CareFolderOutputTemplateBackupHasSchedule').click({\n        force: true\n      });\n      cy.get('#RetryCount_CareFolderOutputTemplateBackupHasSchedule').clear().wait(2000).type('2');\n      cy.get('#TimeoutInSeconds_CareFolderOutputTemplateBackupHasSchedule').clear().wait(2000).type('2');\n      cy.get('.green').eq(1).click({\n        force: true\n      });\n      cy.wait(20000);\n    });\n    cy.get('.dropdown-menu').invoke('css', 'display', 'none');\n  });\n});",
+              "err": {},
+              "uuid": "ca906bcd-f80b-46d2-bfac-817dd29f6742",
+              "parentUUID": "14b8c93f-e025-46c3-b42c-f33a23bcdd7f",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "Delete Simple Record. Section Table Associated Schedules",
+              "fullTitle": "TEST SETTING ASSOCIATED SCHEDULES Delete Simple Record. Section Table Associated Schedules",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(\".ui-grid-col-align\").contains('TEST CYPRESS ASOCIATED SCHEDULES').first().dblclick();\ncy.wait(5000);\ncy.get('.expander-blue').eq(2).click().then(x => {\n  cy.get('.radio-accordion-header-left').contains('Associated Schedules').then(x => {\n    cy.get(\".ui-grid-col-align\").contains('2').first().click();\n    cy.wait(4000);\n    cy.get('.red').eq(2).click();\n    cy.wait(4000);\n    cy.get('.button-group > .marg-right-butt10').click();\n    cy.wait(5000);\n  });\n});",
+              "err": {},
+              "uuid": "01b98dbd-2452-4cd3-aacc-074160724953",
+              "parentUUID": "14b8c93f-e025-46c3-b42c-f33a23bcdd7f",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "Delete Simple Record. Section Form Associated Schedules",
+              "fullTitle": "TEST SETTING ASSOCIATED SCHEDULES Delete Simple Record. Section Form Associated Schedules",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(\".ui-grid-col-align\").contains('TEST CYPRESS ASOCIATED SCHEDULES').first().dblclick();\ncy.wait(5000);\ncy.get('.radio-accordion-header-left').contains('Associated Schedules').then(x => {\n  cy.wait(3000);\n  cy.get('.marg-right-butt1').eq(11).dblclick({\n    force: true\n  }).then(res => {\n    cy.get('.disabled').eq(2).click({\n      force: true\n    }).then(reponse => {\n      cy.wait(1000);\n      cy.get('#checkIsEnabled_CareFolderOutputTemplateBackupHasSchedule').click({\n        force: true\n      });\n      cy.get('#MaxDegreeOfParallelism_CareFolderOutputTemplateBackupHasSchedule').type('4');\n      cy.get('#checkWaitForPreviousToComplete_CareFolderOutputTemplateBackupHasSchedule').click({\n        force: true\n      });\n      cy.get('#RetryCount_CareFolderOutputTemplateBackupHasSchedule').type('4');\n      cy.get('#TimeoutInSeconds_CareFolderOutputTemplateBackupHasSchedule').type('4');\n      cy.get('.green').eq(1).click({\n        force: true\n      });\n      cy.wait(20000);\n      cy.get('.dropdown-menu').invoke('css', 'display', 'none');\n    });\n  });\n});\ncy.get('.expander-blue').eq(2).click().then(x => {\n  cy.get('.radio-accordion-header-left').contains('Associated Schedules').then(x => {\n    cy.get(\".ui-grid-col-align\").contains('4').first().dblclick();\n    cy.get('.marg-top-20 > .red').click();\n    cy.get('.button-group > .marg-right-butt10').click();\n  });\n});",
+              "err": {},
+              "uuid": "f7363c65-fd33-4598-9f2f-9d595b71fa8b",
+              "parentUUID": "14b8c93f-e025-46c3-b42c-f33a23bcdd7f",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "Delete Multiple Records. Section Associated Schedules",
+              "fullTitle": "TEST SETTING ASSOCIATED SCHEDULES Delete Multiple Records. Section Associated Schedules",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(\".ui-grid-col-align\").contains('TEST CYPRESS ASOCIATED SCHEDULES').first().dblclick();\ncy.wait(5000);\ncy.get('.expander-blue').eq(2).click({\n  force: true\n}).then(x => {\n  cy.get('.radio-accordion-header-left').contains('Associated Schedules').then(x => {\n    cy.wait(3000);\n    cy.get('.marg-right-butt1').eq(11).dblclick({\n      force: true\n    }).then(res => {\n      cy.get('.disabled').eq(2).click({\n        force: true\n      }).then(reponse => {\n        cy.get('#MaxDegreeOfParallelism_CareFolderOutputTemplateBackupHasSchedule').type('6');\n        cy.get('#checkWaitForPreviousToComplete_CareFolderOutputTemplateBackupHasSchedule').click({\n          force: true\n        });\n        cy.get('#RetryCount_CareFolderOutputTemplateBackupHasSchedule').type('6');\n        cy.get('#TimeoutInSeconds_CareFolderOutputTemplateBackupHasSchedule').type('6');\n        cy.get('.green').eq(1).click({\n          force: true\n        });\n        cy.wait(20000);\n        cy.get('.dropdown-menu').invoke('css', 'display', 'none');\n      });\n    });\n  });\n});\ncy.wait(7000);\ncy.get('.expander-blue').eq(2).click({\n  force: true\n}).then(x => {\n  cy.get('.radio-accordion-header-left').contains('Associated Schedules').then(x => {\n    cy.get(\".ui-grid-col-align\").its(\"length\").then(element => {\n      numberFila = element;\n      cy.get(\".ui-grid-col-align\").its(\"length\").should(\"be.eq\", numberFila);\n      cy.get('.ui-grid-cell-contents > .ui-grid-selection-row-header-buttons').eq(3).click({\n        force: true\n      });\n      cy.get('.ui-grid-cell-contents > .ui-grid-selection-row-header-buttons').eq(4).click({\n        force: true\n      });\n      cy.pause();\n      cy.get('.red').eq(2).click({\n        force: true\n      });\n      cy.wait(4000);\n      cy.get('.button-group > .marg-right-butt10').click({\n        force: true\n      });\n      cy.get(\".ui-grid-col-align\").its(\"length\").should(\"be.eq\", numberFila);\n    });\n  });\n});",
+              "err": {},
+              "uuid": "03d19f56-062f-49c8-a324-776c8f93bee5",
+              "parentUUID": "14b8c93f-e025-46c3-b42c-f33a23bcdd7f",
+              "isHook": false,
+              "skipped": true
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "2837d51e-901f-44bc-abce-ce8e7b65173a"
+          ],
+          "pending": [],
+          "skipped": [
+            "ab1b274d-037b-40cf-9e24-8dcd402a94f0",
+            "e1660c4d-6a0c-4e41-b03e-125c96706172",
+            "df70e030-33e9-4676-a4ec-c892215f8a01",
+            "4acfa6b6-9ab3-4e7e-aaa3-0806839433ce",
+            "ca906bcd-f80b-46d2-bfac-817dd29f6742",
+            "01b98dbd-2452-4cd3-aacc-074160724953",
+            "f7363c65-fd33-4598-9f2f-9d595b71fa8b",
+            "03d19f56-062f-49c8-a324-776c8f93bee5"
+          ],
+          "duration": 11282,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "charts": true,
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress/report"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

@@ -1,16 +1,20 @@
 {
-    "baseUrl": "https://debugsite.myequipe2/app/",
-    "experimentalStudio": true,
-    "reporter": "mochawesome",
-    "reporterOptions": {
-        "charts": true,
-        "overwrite": false,
-        "html": false,
-        "json": true,
-        "reportDir": "cypress/report"
-    },
-    "env": {
-        "contacts_url": "",
-        "server_url": ""
-    }
+  "baseUrl": "https://debugsite.myequipe2/app",
+  "defaultCommandTimeout": 30000,
+  "viewportWidth": 1024,
+  "viewportHeight": 720,
+  "experimentalStudio": true,
+  "reporter": "mochawesome",
+  "reporterOptions": {
+    "charts": true,
+    "overwrite": false,
+    "html": false,
+    "json": true,
+    "reportDir": "cypress/report"
+  },
+  "env": {
+    "contacts_url": "",
+    "server_url": ""
+  },
+  "projectId": "a2ha16"
 }

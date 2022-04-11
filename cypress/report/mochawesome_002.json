@@ -1,0 +1,187 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2022-04-11T19:42:28.502Z",
+    "end": "2022-04-11T19:42:58.835Z",
+    "duration": 30333,
+    "testsRegistered": 5,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 4,
+    "hasSkipped": true
+  },
+  "results": [
+    {
+      "uuid": "3c187dac-efdd-4144-9285-6bd4d420dda7",
+      "title": "",
+      "fullFile": "cypress/integration/crud_setting_care_folder_output_backup_request/crud_section_as_request.spec.js",
+      "file": "cypress/integration/crud_setting_care_folder_output_backup_request/crud_section_as_request.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "b7fb4d8f-a6ad-4525-90ca-d8dd6f3adbfb",
+          "title": "TEST HTTP REQUEST SECTION ASSOCIATED SCHEDULE",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "GET Associated Schedules",
+              "fullTitle": "TEST HTTP REQUEST SECTION ASSOCIATED SCHEDULE GET Associated Schedules",
+              "timedOut": null,
+              "duration": 30258,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.getRequest('https://debugsite.myequipe2/webapi/api/v1/CareFolderOutputTemplateBackupHasSchedule/GetConfigurationList?careFolderOutputTemplateBackupId=7ee1b53c-5714-31a1-3b5c-6d9e147f3d27', headers, 3, 'cypress/fixtures/associatedSchedules.json');\ncy.pause();",
+              "err": {
+                "message": "CypressError: `cy.request()` timed out waiting `30000ms` for a response from your server.\n\nThe request we sent was:\n\nMethod: POST\nURL: https://debugsite.myequipe2/webapi/api/v1/Session/Login\n\nNo response was received within the timeout.\n\nhttps://on.cypress.io/request\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `TEST HTTP REQUEST SECTION A...`",
+                "estack": "CypressError: `cy.request()` timed out waiting `30000ms` for a response from your server.\n\nThe request we sent was:\n\nMethod: POST\nURL: https://debugsite.myequipe2/webapi/api/v1/Session/Login\n\nNo response was received within the timeout.\n\nhttps://on.cypress.io/request\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `TEST HTTP REQUEST SECTION A...`\n    at https://debugsite.myequipe2/__cypress/runner/cypress_runner.js:160677:78\n    at tryCatcher (https://debugsite.myequipe2/__cypress/runner/cypress_runner.js:13022:23)\n    at https://debugsite.myequipe2/__cypress/runner/cypress_runner.js:8144:41\n    at tryCatcher (https://debugsite.myequipe2/__cypress/runner/cypress_runner.js:13022:23)\n    at Promise._settlePromiseFromHandler (https://debugsite.myequipe2/__cypress/runner/cypress_runner.js:10957:31)\n    at Promise._settlePromise (https://debugsite.myequipe2/__cypress/runner/cypress_runner.js:11014:18)\n    at Promise._settlePromise0 (https://debugsite.myequipe2/__cypress/runner/cypress_runner.js:11059:10)\n    at Promise._settlePromises (https://debugsite.myequipe2/__cypress/runner/cypress_runner.js:11135:18)\n    at _drainQueueStep (https://debugsite.myequipe2/__cypress/runner/cypress_runner.js:7729:12)\n    at _drainQueue (https://debugsite.myequipe2/__cypress/runner/cypress_runner.js:7722:9)\n    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (https://debugsite.myequipe2/__cypress/runner/cypress_runner.js:7738:5)\n    at Async.drainQueues (https://debugsite.myequipe2/__cypress/runner/cypress_runner.js:7608:14)\nFrom Your Spec Code:\n    at Context.eval (https://debugsite.myequipe2/__cypress/tests?p=cypress\\integration\\crud_setting_care_folder_output_backup_request\\crud_section_as_request.spec.js:109:8)",
+                "diff": null
+              },
+              "uuid": "ca974161-070e-4b2e-8c8a-950d1cbd79a7",
+              "parentUUID": "b7fb4d8f-a6ad-4525-90ca-d8dd6f3adbfb",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "POST Associated Schedules",
+              "fullTitle": "TEST HTTP REQUEST SECTION ASSOCIATED SCHEDULE POST Associated Schedules",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "let body = {\n  $id: \"1\",\n  careFolderOutputTemplateBackupId: \"7ee1b53c-5714-31a1-3b5c-6d9e147f3d27\",\n  computeHashOnSuccess: true,\n  dayOfMonth: \"4\",\n  dayOfWeek: \"4\",\n  hour: \"4\",\n  id: idGuid,\n  isEnabled: true,\n  maxDegreeOfParallelism: 5,\n  minute: \"4\",\n  month: \"4\",\n  retryCount: 5,\n  timeoutInSeconds: 5,\n  waitForPreviousToComplete: false\n};\ncy.postRequest('https://debugsite.myequipe2/webapi/api/v1/CareFolderOutputTemplateBackupHasSchedule/Save', headers, body, '7ee1b53c-5714-31a1-3b5c-6d9e147f3d27', 1);\ncy.pause();",
+              "err": {},
+              "uuid": "0a0a52c7-2d01-4edb-9aef-de7bf4f8e9f4",
+              "parentUUID": "b7fb4d8f-a6ad-4525-90ca-d8dd6f3adbfb",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "GET ítem Associated Schedules",
+              "fullTitle": "TEST HTTP REQUEST SECTION ASSOCIATED SCHEDULE GET ítem Associated Schedules",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.request({\n  method: \"POST\",\n  url: \"https://debugsite.myequipe2/webapi/api/v1/CareFolderOutputTemplateBackupHasSchedule/Read\",\n  body: {\n    $id: \"0\",\n    id: idGuid\n  },\n  headers: headers\n}).then(function (response) {\n  expect(response.body.careFolderOutputTemplateBackupId).eq('7ee1b53c-5714-31a1-3b5c-6d9e147f3d27');\n  cy.pause();\n});",
+              "err": {},
+              "uuid": "738f4500-c150-4772-a8d2-4d64a27a0721",
+              "parentUUID": "b7fb4d8f-a6ad-4525-90ca-d8dd6f3adbfb",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": " Delete from table, Associated Schedules",
+              "fullTitle": "TEST HTTP REQUEST SECTION ASSOCIATED SCHEDULE  Delete from table, Associated Schedules",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.request({\n  method: \"POST\",\n  url: \"https://debugsite.myequipe2/webapi/api/v1/CareFolderOutputTemplateBackupHasSchedule/DeleteMultiple\",\n  body: {\n    $id: \"0\",\n    ids: [{\n      $id: \"2\",\n      value: idGuid\n    }]\n  },\n  headers: headers\n}).then(function (response) {\n  expect(response.body).to.deep.equal(0);\n  cy.pause();\n});",
+              "err": {},
+              "uuid": "155d736a-716e-45f7-a360-c6245fbf8e30",
+              "parentUUID": "b7fb4d8f-a6ad-4525-90ca-d8dd6f3adbfb",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": " Delete from Form, Associated Schedules",
+              "fullTitle": "TEST HTTP REQUEST SECTION ASSOCIATED SCHEDULE  Delete from Form, Associated Schedules",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.request({\n  method: \"DELETE\",\n  url: \"https://debugsite.myequipe2/webapi/api/v1/CareFolderOutputTemplateBackupHasSchedule/Delete?id==\" + idGuid,\n  body: {\n    id: deleteValue\n  },\n  headers: headers\n}).then(function (response) {\n  expect(response.body).to.deep.equal(0);\n  cy.pause();\n});",
+              "err": {},
+              "uuid": "c532b707-de4e-4262-84b0-36af0e0cff38",
+              "parentUUID": "b7fb4d8f-a6ad-4525-90ca-d8dd6f3adbfb",
+              "isHook": false,
+              "skipped": true
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "ca974161-070e-4b2e-8c8a-950d1cbd79a7"
+          ],
+          "pending": [],
+          "skipped": [
+            "0a0a52c7-2d01-4edb-9aef-de7bf4f8e9f4",
+            "738f4500-c150-4772-a8d2-4d64a27a0721",
+            "155d736a-716e-45f7-a360-c6245fbf8e30",
+            "c532b707-de4e-4262-84b0-36af0e0cff38"
+          ],
+          "duration": 30258,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "charts": true,
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress/report"
+      },
+      "version": "6.2.0"
+    }
+  }
+}
