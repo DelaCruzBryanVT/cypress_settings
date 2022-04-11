@@ -1,5 +1,5 @@
 {
-  "baseUrl": "http://127.0.0.1:8080",
+  "baseUrl": "https://debugsite.myequipe2:8080/app",
   "defaultCommandTimeout": 30000,
   "viewportWidth": 1024,
   "viewportHeight": 720,
