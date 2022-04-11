@@ -11,7 +11,7 @@ workflows:
           # give this job a custom name for clarity
           name: 'Test Setting Care Folder Output Template Backup'
           requires:
-            # use previously installed dependencie
+            # use previously installed dependenci
             - cypress/install
           record: true 
           parallel: true 
