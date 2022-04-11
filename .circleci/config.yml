@@ -16,5 +16,5 @@ workflows:
             - cypress/install
           record: true # record results to Cypress Dashboard
           parallel: true # run tests in parallel
-          parallelism: 3 # use 3 CircleCI machines
+          parallelism: 3 
           group: 3 machines
