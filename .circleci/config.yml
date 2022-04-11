@@ -17,4 +17,4 @@ workflows:
           record: true 
           parallel: true 
           parallelism: 3 
-          group: test 1
+          group: test 2
