@@ -1,5 +1,5 @@
 {
-  "baseUrl": "https://wwww.google.com.ec/",
+  "baseUrl": "https://debugsite.myequipe2/app",
   "defaultCommandTimeout": 30000,
   "viewportWidth": 1024,
   "viewportHeight": 720,
