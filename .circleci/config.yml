@@ -14,7 +14,7 @@ workflows:
             # use previously installed dependencies
             # to avoid installing them on each machine running tests
             - cypress/install
-          record: true # record results to Cypress Dashboard
+          record: true 
           parallel: true 
           parallelism: 3 
           group: 3 machines
