@@ -11,7 +11,7 @@ describe('CRUD SETTING CARE FOLDER OUTPUT TEMPLATE BACKUP', function () {
             console.log(response)
             expect(response.status).eq(200);
         });
-        cy.visit("/")
+        cy.visit("https://debugsite.myequipe2:8080/app")
         cy.location().should(loc => {
             expect(loc.pathname).to.equal('/app/')
         })
