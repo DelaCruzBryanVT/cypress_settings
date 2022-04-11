@@ -12,7 +12,6 @@ workflows:
           name: 'Test Setting Care Folder Output Template Backup'
           requires:
             # use previously installed dependencies
-           
             - cypress/install
           record: true 
           parallel: true 
