@@ -13,7 +13,7 @@
     "start-server-and-test": "^1.14.0"
   },
   "scripts": {
-    "cy:run": "cypress run",
+    "cy:run": "wait-on tcp:8080 && cypress run",
     "test": "start-server-and-test start https://debugsite.myequipe2/app cy:run"
   },
   "repository": {
