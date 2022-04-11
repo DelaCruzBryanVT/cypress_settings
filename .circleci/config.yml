@@ -16,5 +16,5 @@ workflows:
           record: true 
           parallel: true 
           parallelism: 3 
-          group: test 2
+          group: test 3
           start: "npx cypress open"
