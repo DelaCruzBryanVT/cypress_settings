@@ -13,7 +13,8 @@
     "start-server-and-test": "^1.14.0"
   },
   "scripts": {
-    "test": "test"
+    "cy:run": "cypress run",
+    "test": "start-server-and-test start https://debugsite.myequipe2/app cy:run"
   },
   "repository": {
     "type": "git",
