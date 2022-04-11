@@ -12,9 +12,9 @@ workflows:
           name: 'Test Setting Care Folder Output Template Backup'
           requires:
             # use previously installed dependencies
-            # to avoid installing them 
+           
             - cypress/install
           record: true 
           parallel: true 
           parallelism: 3 
-          group: 3 machines
+          group: test
