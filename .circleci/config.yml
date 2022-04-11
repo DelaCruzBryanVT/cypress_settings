@@ -17,3 +17,4 @@ workflows:
           parallel: true 
           parallelism: 3 
           group: test 2
+          start: "npx cypress open"
