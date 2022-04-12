@@ -11,4 +11,4 @@ workflows:
           record: true
           parallel: true
           parallelism: 2
-          ci-build-id: '9bc666ab-3ae5-42d8-bcf8-4b69fc92fb04'
+          wait-on: 'https://127.0.0.13:443/app'
