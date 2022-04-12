@@ -23,3 +23,4 @@ jobs:
             - ~/.npm
             - ~/.cache
       - run: $(npm bin)/cypress run --record --key 4378f693-24bc-4faf-9e41-c92570c89d3e
+      - wait-on: 'https://debugsite.myequipe2/app'
