@@ -1,14 +1,24 @@
 version: 2.1
 orbs:
+  # https://github.com/cypress-io/circleci-orb
   cypress: cypress-io/cypress@1
 workflows:
   build:
     jobs:
-      - cypress/install
+      # first get the source code and install npm dependencies
+      - cypress/install:
+          name: Install dependencies
+
       - cypress/run:
+          name: Run tests
           requires:
-            - cypress/install
-          record: true
-          parallel: true
-          parallelism: 2
-          wait-on: 'https://127.0.0.13:443/app'
+            - Install dependencies
+          record: true # record results on Cypress Dashboard
+          parallel: true # split all specs across machines
+          parallelism: 4 # use 4 CircleCI machines to finish quickly
+          group: 'all tests' # name this group "all tests" on the dashboard
+          # typically you want Cypress to determine the build ID
+          # that ties all parallel test jobs together
+          # or you can pass your own ID using environment variables
+          ci-build-id: 'testing-commit-${CIRCLE_SHA1}'
+          wait-on: 'https://debugsite.myequipe2/app'
