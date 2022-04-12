@@ -1,5 +1,5 @@
 {
-  "baseUrl": "https://127.0.0.13:443/app",
+  "baseUrl": "https://debugsite.myequipe2/app",
   "integrationFolder": "cypress/integration",
   "defaultCommandTimeout": 30000,
   "viewportWidth": 1024,
