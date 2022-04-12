@@ -1,16 +1,14 @@
+# to use orbs, must use version >= 2.1
 version: 2.1
 orbs:
+  # import Cypress orb by specifying an exact version x.y.z
+  # or the latest version 1.x.x
   cypress: cypress-io/cypress@1
 workflows:
   build:
     jobs:
-      # install dependencies first (on 1 machine)
-      - cypress/install
-      # now run tests
+      # checks out code, installs npm dependencies
+      # and runs all Cypress tests and records results on Cypress Dashboard
+      # cypress/run job comes from "cypress" orb imported above
       - cypress/run:
-          # give this job a custom name for clarity
-          name: 'Test Setting Care Folder Output Template Backup'
-          record: true 
-          parallel: true 
-          parallelism: 3 
-          group: test 3
+          record: true
