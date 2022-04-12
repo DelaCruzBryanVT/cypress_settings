@@ -20,5 +20,4 @@ workflows:
           # typically you want Cypress to determine the build ID
           # that ties all parallel test jobs together
           # or you can pass your own ID using environment variables
-          ci-build-id: 'testing-commit-${CIRCLE_SHA1}'
           wait-on: 'https://debugsite.myequipe2/app'
