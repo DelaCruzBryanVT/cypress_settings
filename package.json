@@ -14,8 +14,10 @@
   },
   "scripts": {
     "start": "my-server -p 8080",
-    "cy:run": "wait-on tcp:3000 && cypress run",
-    "test": "start-server-and-test start https://debugsite.myequipe2/app cy:run"
+    "start-server": "npm start",
+    "cy:run": "wait-on tcp:5 && cypress run",
+    "test": "start-server-and-test start https://debugsite.myequipe2/app cy:run",
+    "ci": "start-server-and-test start-server https://debugsite.myequipe2/app test"
   },
   "repository": {
     "type": "git",
