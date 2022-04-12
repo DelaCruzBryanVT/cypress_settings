@@ -1,24 +1,26 @@
-version: 2.1
-orbs:
-  # https://github.com/cypress-io/circleci-orb
-  cypress: cypress-io/cypress@1
-workflows:
+version: 2
+jobs:
   build:
-    jobs:
-      # first get the source code and install npm dependencies
-      - cypress/install:
-          name: Install dependencies
-
-      - cypress/run:
-          name: Run tests
-          requires:
-            - Install dependencies
-          record: true # record results on Cypress Dashboard
-          parallel: true # split all specs across machines
-          parallelism: 4 # use 4 CircleCI machines to finish quickly
-          group: 'all tests' # name this group "all tests" on the dashboard
-          # typically you want Cypress to determine the build ID
-          # that ties all parallel test jobs together
-          # or you can pass your own ID using environment variables
-          ci-build-id: 'testing-commit-${CIRCLE_SHA1}'
-          wait-on: 'https://debugsite.myequipe2/app'
+    docker:
+      - image: cypress/base:14.16.0
+        environment:
+          ## this enables colors in the output
+          TERM: xterm
+    working_directory: ~/app
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - v1-deps-{{ .Branch }}-{{ checksum "package.json" }}
+            - v1-deps-{{ .Branch }}
+            - v1-deps
+      - run:
+          name: Install Dependencies
+          command: npm ci
+      - save_cache:
+          key: v1-deps-{{ .Branch }}-{{ checksum "package.json" }}
+          # cache NPM modules and the folder with the Cypress binary
+          paths:
+            - ~/.npm
+            - ~/.cache
+      - run: $(npm bin)/cypress run --record --key 4378f693-24bc-4faf-9e41-c92570c89d3e
